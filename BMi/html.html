@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        height: 100vh;
+      }
+  </style>
+</head>
+<body>
+  <input type="text" id="weight" ><br>
+  <input type="text" id = "height"><br>
+  <button onclick = "get()">GET BMI</button>
+  <!--onclick = add listener()  -->
+  <!-- <button id ="button">Get</button> -->
+  <script>
+      //CHia code ra từng công việc
+      // var button =
+      function get(){
+        var a = document.getElementById('weight').value;
+        //nếu k có value hn chỉ bjt m láy cái input vs id = weight thôi
+        var b = document.getElementById('height').value;
+
+        var bmi = a / (b*b);
+
+        if(bmi < 18){
+          alert("thiếu cân");
+        }else if(bmi > 25){
+          alert("Thừa cân");
+        }else{
+          alert("Cân đối");
+        }
+      }
+  </script>
+</body>
+</html>

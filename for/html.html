@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    var number = [
+      1,2,9,5,66,33,44,122,13,1,4,53,4,436,36,3
+    ]
+
+    console.log("Mảng ban đầu : "+number);
+
+    //dùng 2 for lồng nhau
+    //1 vòng ngoài chạy từ [0] tới  number.length - 1
+    // 7,4, 5,6
+    //i[0] = 7;
+    //j = 4;
+    //kiểm tra 7> 4 thì sắp xếp
+  console.log(number.length);
+    for(var i = 0; i < number.length - 1; i++){
+      // i[0] = 1;
+      // i[14] = 36;
+      //i [5]
+      for(var j = i + 1; j < number.length; j++){
+        //j[1] = 2;
+        //j[15] = 3;
+        //[6]
+        // var temp =
+        //muốn mà sắp xếp phải tạo biến temp chứa number[i];
+        //number[i] = number[j]..là number[i] hn mất rồi chừ tkk number[j] mà muốn lấy number[i] là láy k đc
+        // nếu mà i > j -> number[i] = number[j],number[j] = number[i].
+        //cho một biến trung gian chứa tk number[i].
+          //điều kiện nếu j<i..nếu sắp xếp giảm dần thì ngược lại j>i
+          if(number[i] < number[j]){
+              var temp = number[i];//biến tạm..lưu tk number [i]
+              number[i] = number[j];
+              number[j] = temp;
+          }
+      }
+    }
+    console.log("Mảng mới : "+ number);
+  </script>
+</body>
+</html>
